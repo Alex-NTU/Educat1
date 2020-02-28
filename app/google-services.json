@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "928095662783",
+    "firebase_url": "https://educat-323c0.firebaseio.com",
+    "project_id": "educat-323c0",
+    "storage_bucket": "educat-323c0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:928095662783:android:cd808fe628918907108c0a",
+        "android_client_info": {
+          "package_name": "com.example.educat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "928095662783-5t5n1e90ul348ek042joqlmrikf9po90.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.educat",
+            "certificate_hash": "0955904f8892fa9d10cab003f7d7649b1906b4dc"
+          }
+        },
+        {
+          "client_id": "928095662783-aq51tbcuo7lqsusjr80mkl97ueu1n741.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOnAQCF7NeGzuB1HPpHU1W0FxLHg19ISQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "928095662783-aq51tbcuo7lqsusjr80mkl97ueu1n741.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
