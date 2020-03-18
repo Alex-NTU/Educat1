@@ -1,67 +1,57 @@
 package com.example.educat.Notes;
 
+
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName = "notes")
 public class Note
 {
-    private long ID;
-    private String title;
-    private String content;
-    private String date;
-    private String time;
+    @PrimaryKey(autoGenerate = true)
+    private int id = -1;
+    @ColumnInfo(name = "text")
+    private String notesText;
+    @ColumnInfo(name = "date")
+    private long notesDate;
 
-    Note(){}
-    Note (String title,String content, String date, String time){
-        this.title = title;
-        this.content = content;
-        this.date = date;
-        this.time = time;
+    public Note() {
     }
 
-    Note(long id,String title,String content, String date, String time)
-    {
-        this.ID = id;
-        this.title = title;
-        this.content = content;
-        this.date = date;
-        this.time = time;
+    public Note(String notesText, long notesDate) {
+        this.notesText = notesText;
+        this.notesDate = notesDate;
     }
 
-    public long getID() {
-        return ID;
+    public String getNotesText() {
+        return notesText;
     }
 
-    public void setID(long ID) {
-        this.ID = ID;
+    public void setNotesText(String notesText) {
+        this.notesText = notesText;
     }
 
-    public String getTitle() {
-        return title;
+    public long getNotesDate() {
+        return notesDate;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setNotesDate(long notesDate) {
+        this.notesDate = notesDate;
     }
 
-    public String getContent() {
-        return content;
+    public int getId() {
+        return id;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-    }
-
-    public String getTime() {
-        return time;
-    }
-
-    public void setTime(String time) {
-        this.time = time;
+    @Override
+    public String toString() {
+        return "Note{" +
+                "id=" + id +
+                ", noteDate=" + notesDate +
+                '}';
     }
 }

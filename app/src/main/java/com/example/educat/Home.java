@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.example.educat.Notes.NotesMainActivity;
+import com.example.educat.Notes.NoteMainActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Home extends AppCompatActivity {
@@ -60,7 +60,7 @@ public class Home extends AppCompatActivity {
 
     private void moveToNewActivity () {
 
-        Intent i = new Intent(Home.this, NotesMainActivity.class);
+       Intent i = new Intent(Home.this, NoteMainActivity.class);
         startActivity(i);
         ((Activity) Home.this).overridePendingTransition(0, 0);
     }
