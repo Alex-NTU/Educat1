@@ -9,27 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Notes.EditNoteActivity"></activity>
         <activity
             android:name=".Notes.NoteMainActivity"
-            android:label="@string/title_activity_note_main"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Notes.NotesMainActivity" />
-        <activity android:name=".Notes.Edit" />
-        <activity
-            android:name=".Notes.Details"
-            android:label="@string/title_activity_details"
-            android:parentActivityName=".Notes.NotesMainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.educat.Notes.NotesMainActivity" />
-        </activity>
-        <activity android:name=".Notes.AddNote">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Notes.NotesMainActivity" />
-        </activity>
+            android:label="Educat Notes"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".Notes.AddNotes" />
+        <activity android:name=".Notes.EditNotes" />
+        <activity android:name=".Notes.NoteDetail" />
         <activity android:name=".SubCat" />
         <activity android:name=".ScoreDetail" />
         <activity android:name=".Done" />
