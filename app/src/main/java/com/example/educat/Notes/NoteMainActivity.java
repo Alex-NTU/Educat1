@@ -14,7 +14,9 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.educat.Home;
 import com.example.educat.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.List;
 
@@ -23,6 +25,7 @@ public class NoteMainActivity extends AppCompatActivity{
     Toolbar toolbar;
     RecyclerView recyclerView;
     com.example.educat.Notes.Adapter adapter;
+    FloatingActionButton btnmenu;
     TextView noItemText;
     NoteDatabase simpleDatabase;
 
@@ -37,6 +40,15 @@ public class NoteMainActivity extends AppCompatActivity{
         simpleDatabase = new NoteDatabase(this);
         List<Note> allNotes = simpleDatabase.getAllNotes();
         recyclerView = findViewById(R.id.allNotesList);
+        btnmenu = (FloatingActionButton)findViewById(R.id.btnMainMenu);
+
+        btnmenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent menuIntent = new Intent(NoteMainActivity.this, Home.class);
+                startActivity(menuIntent);
+            }
+        });
 
         if(allNotes.isEmpty()){
             noItemText.setVisibility(View.VISIBLE);
@@ -83,5 +95,6 @@ public class NoteMainActivity extends AppCompatActivity{
 
 
     }
+
 
 }

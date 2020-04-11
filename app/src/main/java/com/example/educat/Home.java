@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.educat.Notes.NoteMainActivity;
+import com.example.educat.Revision.RevisionMainActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Home extends AppCompatActivity {
@@ -37,10 +38,11 @@ public class Home extends AppCompatActivity {
                         break;
                     case R.id.action_revision:
                         selectedFragment = RevisionFragment.newInstance();
+                        moveToNewActivityRevision ();
                         break;
                     case R.id.action_diary:
                         selectedFragment = CategoryFragment.newInstance();
-                        moveToNewActivity();
+                        moveToNewActivityNotes();
                         break;
                 }
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
@@ -58,9 +60,15 @@ public class Home extends AppCompatActivity {
         transaction.commit();
     }
 
-    private void moveToNewActivity () {
+    private void moveToNewActivityNotes () {
 
        Intent i = new Intent(Home.this, NoteMainActivity.class);
+        startActivity(i);
+        ((Activity) Home.this).overridePendingTransition(0, 0);
+    }
+    private void moveToNewActivityRevision () {
+
+        Intent i = new Intent(Home.this, RevisionMainActivity.class);
         startActivity(i);
         ((Activity) Home.this).overridePendingTransition(0, 0);
     }

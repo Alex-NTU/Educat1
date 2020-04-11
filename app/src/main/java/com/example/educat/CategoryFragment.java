@@ -71,7 +71,6 @@ public class CategoryFragment extends Fragment {
                 viewHolder.setItemClickListener(new ItemClickListener() {
                     @Override
                     public void onClick(View view, int position, boolean isLongClick) {
-                        //Toast.makeText(getActivity(),String.format("%s|%s",adapter.getRef(position).getKey(),category.getName()),Toast.LENGTH_SHORT).show();
                         Intent startGame = new Intent(getActivity(),SubCat.class);
                         Common.categoryId = adapter.getRef(position).getKey();
                         Common.categoryName = category.getName();
