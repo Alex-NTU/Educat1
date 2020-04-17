@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,9 +17,10 @@ import com.example.educat.R;
 import java.util.Arrays;
 import java.util.Collections;
 
-public class RevisionGame extends AppCompatActivity implements View.OnClickListener {
+public class HardwareGame extends AppCompatActivity implements View.OnClickListener {
 
     ImageView Box1, Box2, Box3, Box4, Box5, Box6, Box7, Box8, Box9, Box10, Box11, Box12;
+    TextView Instruction;
 
     // array for the images
     Integer[] cards = {101,102,103,104,105,106,201,202,203,204,205,206};
@@ -37,6 +39,8 @@ public class RevisionGame extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.revision_game);
+        Instruction = (TextView)findViewById(R.id.instruction);
+        Instruction.setText("Find the pieces of hardware and match them to their description");
 
         Box1 = (ImageView) findViewById(R.id.box1);
         Box2 = (ImageView) findViewById(R.id.box2);
@@ -358,7 +362,7 @@ public class RevisionGame extends AppCompatActivity implements View.OnClickListe
                 Box11.getVisibility() == View.INVISIBLE &&
                 Box12.getVisibility() == View.INVISIBLE){
 
-            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(RevisionGame.this);
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(HardwareGame.this);
             alertDialogBuilder
                     .setPositiveButton("Return To Game Menu", new DialogInterface.OnClickListener() {
                         @Override
