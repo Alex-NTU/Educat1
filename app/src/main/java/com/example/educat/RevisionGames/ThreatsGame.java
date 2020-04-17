@@ -40,7 +40,7 @@ public class ThreatsGame extends AppCompatActivity implements View.OnClickListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.revision_network);
         Instruction = (TextView)findViewById(R.id.instruction);
-        Instruction.setText("Find the pieces of hardware and match them to their description");
+        Instruction.setText("Find the threats and match them to their description");
 
         Box1 = (ImageView) findViewById(R.id.box1);
         Box2 = (ImageView) findViewById(R.id.box2);
