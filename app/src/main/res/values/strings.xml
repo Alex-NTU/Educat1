@@ -15,4 +15,5 @@
     <string name="action_delete">Delete</string>
     <string name="note_deleted">Note deleted</string>
     <string name="title_activity_revision_main">RevisionMainActivity</string>
+    <string name="title_activity_revision_game_menu">RevisionGameMenu</string>
 </resources>

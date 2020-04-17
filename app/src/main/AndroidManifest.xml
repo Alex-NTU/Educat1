@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.educat">
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,16 +12,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <activity
+            android:name=".RevisionGames.RevisionGameMenu"
+            android:label="@string/title_activity_revision_game_menu"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".Revision.RevisionMainActivity"
             android:label="@string/title_activity_revision_main"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Notes.NoteMainActivity"
             android:label="Educat Notes"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Notes.AddNotes" />
+        <activity android:name=".RevisionGames.RevisionGame" />
         <activity android:name=".Notes.EditNotes" />
         <activity android:name=".Notes.NoteDetail" />
         <activity android:name=".SubCat" />

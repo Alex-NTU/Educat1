@@ -12,6 +12,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.example.educat.Notes.NoteMainActivity;
 import com.example.educat.Revision.RevisionMainActivity;
+import com.example.educat.RevisionGames.RevisionGameMenu;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Home extends AppCompatActivity {
@@ -39,6 +40,10 @@ public class Home extends AppCompatActivity {
                     case R.id.action_revision:
                         selectedFragment = RevisionFragment.newInstance();
                         moveToNewActivityRevision ();
+                        break;
+                    case R.id.RevisionGame:
+                        selectedFragment = CategoryFragment.newInstance();
+                        moveToNewActivityRevisionGame();
                         break;
                     case R.id.action_diary:
                         selectedFragment = CategoryFragment.newInstance();
@@ -69,6 +74,12 @@ public class Home extends AppCompatActivity {
     private void moveToNewActivityRevision () {
 
         Intent i = new Intent(Home.this, RevisionMainActivity.class);
+        startActivity(i);
+        ((Activity) Home.this).overridePendingTransition(0, 0);
+    }
+    private void moveToNewActivityRevisionGame () {
+
+        Intent i = new Intent(Home.this, RevisionGameMenu.class);
         startActivity(i);
         ((Activity) Home.this).overridePendingTransition(0, 0);
     }

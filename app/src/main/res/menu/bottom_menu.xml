@@ -25,6 +25,13 @@
         app:showAsAction="ifRoom" />
 
     <item
+        android:id="@+id/RevisionGame"
+        android:enabled="true"
+        android:title="Diary"
+        android:icon="@drawable/ic_videogame_asset_black_24dp"
+        app:showAsAction="ifRoom" />
+
+    <item
         android:id="@+id/action_diary"
         android:enabled="true"
         android:title="Diary"
