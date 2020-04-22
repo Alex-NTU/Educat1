@@ -65,31 +65,36 @@ public class PdfViewer extends Fragment implements OnPageChangeListener, OnLoadC
 
         }
         else if (pos == 3) {
-            displayFromAsset("networks.pdf");
+            pdfView.fromAsset("networks.pdf").load();
 
         }
         else if (pos == 4) {
-            displayFromAsset("security.pdf");
+            pdfView.fromAsset("security.pdf").load();
 
         }
         else if (pos == 5) {
-            displayFromAsset("legal.pdf");
+            pdfView.fromAsset("legal.pdf")
+                    .load();
 
         }
         else if (pos == 6) {
-            displayFromAsset("algorithms.pdf");
+            pdfView.fromAsset("algorithms.pdf")
+                    .load();
 
         }
         else if (pos == 7) {
-            displayFromAsset("programming.pdf");
+            pdfView.fromAsset("programming.pdf")
+                    .load();
 
         }
         else if (pos == 8) {
-            displayFromAsset("data.pdf");
+            pdfView.fromAsset("data.pdf")
+                    .load();
 
         }
         else if (pos == 9) {
-            displayFromAsset("logic.pdf");
+            pdfView.fromAsset("logic.pdf")
+                    .load();
 
         }
         setHasOptionsMenu(true);
@@ -198,11 +203,4 @@ public class PdfViewer extends Fragment implements OnPageChangeListener, OnLoadC
 
     }
 
-    /**
-     * Listener for response to user permission request
-     *
-     * @param requestCode  Check that permission request code matches
-     * @param permissions  Permissions that requested
-     * @param grantResults Whether permissions granted
-     */
 }

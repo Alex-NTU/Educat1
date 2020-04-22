@@ -18,8 +18,8 @@ import com.squareup.picasso.Picasso;
 
 public class Playing extends AppCompatActivity implements View.OnClickListener {
 
-    final static long INTERVAL = 1000; // 1 second
-    final static  long TIMEOUT = 7000; //7 Seconds
+    final static long INTERVAL = 3000; // 1 second
+    final static  long TIMEOUT = 150000; //7 Seconds
     int progressValue = 0;
     CountDownTimer mCountDown;
     int index=0,score=0,thisQuestion=0,totalQuestion,correctAnswer;

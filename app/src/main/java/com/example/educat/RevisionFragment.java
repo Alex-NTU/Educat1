@@ -72,7 +72,7 @@ public class RevisionFragment extends Fragment {
                     @Override
                     public void onClick(View view, int position, boolean isLongClick) {
                         //Toast.makeText(getActivity(),String.format("%s|%s",adapter.getRef(position).getKey(),category.getName()),Toast.LENGTH_SHORT).show();
-                        Intent startGame = new Intent(getActivity(),RevisionSubCat.class);
+                        Intent startGame = new Intent(getActivity(),Home.class);
                         Common.categoryId = adapter.getRef(position).getKey();
                         Common.categoryName = category.getName();
                         startGame.putExtra("CategoryId",adapter.getRef(position).getKey());

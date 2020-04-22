@@ -71,7 +71,7 @@ public class CategoryFragment extends Fragment {
                 viewHolder.setItemClickListener(new ItemClickListener() {
                     @Override
                     public void onClick(View view, int position, boolean isLongClick) {
-                        Intent startGame = new Intent(getActivity(),SubCat.class);
+                        Intent startGame = new Intent(getActivity(),Start.class);
                         Common.categoryId = adapter.getRef(position).getKey();
                         Common.categoryName = category.getName();
                         startGame.putExtra("CategoryId",adapter.getRef(position).getKey());
